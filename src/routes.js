@@ -9,6 +9,10 @@ const SessionController = require('./controllers/SessionController.js');
 
 const routes = express.Router();
 
+routes.get('/', (req, res) => {
+	return res.send("Teste deploy");
+});
+
 routes.post('/sessions', SessionController.store);
 
 routes.get('/profile', celebrate({
